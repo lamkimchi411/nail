@@ -481,13 +481,16 @@ function App() {
     );
   }
 
-  // Admin goes directly to AdminPanel; customers stay on the public booking flow.
-  if (auth.user?.role === 'admin') {
+  const [viewPublicHome, setViewPublicHome] = useState(false);
+
+  // Admin goes directly to AdminPanel unless they toggled to view PublicHome
+  if (auth.user?.role === 'admin' && !viewPublicHome) {
     return (
       <AdminPanel
         auth={auth}
         setAuth={setAuth}
         onLogout={() => logoutCurrentUser(setAuth)}
+        onGoHome={() => setViewPublicHome(true)}
         page={adminPage}
         setPage={setAdminPage}
       />
@@ -499,7 +502,7 @@ function App() {
     <PublicHome
       auth={auth}
       setAuth={setAuth}
-      onAdminClick={null}
+      onAdminClick={auth.user?.role === 'admin' ? () => setViewPublicHome(false) : null}
       onLogout={() => logoutCurrentUser(setAuth)}
       onLoginClick={() => { setAuthMode('login'); setShowAuthForm(true); }}
       onRegisterClick={() => { setAuthMode('register'); setShowAuthForm(true); }}
@@ -1149,7 +1152,7 @@ function PublicHome({ auth, setAuth, onAdminClick, onLogout, onLoginClick, onReg
   );
 }
 
-function AdminPanel({ auth, setAuth, onLogout, page, setPage }) {
+function AdminPanel({ auth, setAuth, onLogout, onGoHome, page, setPage }) {
   const [services, setServices] = useState([]);
   const [staffs, setStaffs] = useState([]);
   const [appointments, setAppointments] = useState([]);
@@ -2027,10 +2030,17 @@ function AdminPanel({ auth, setAuth, onLogout, page, setPage }) {
         </div>
       )}
       <aside className="w-64 border-r border-[#7f5c44]/30 bg-[#140d1f] p-6">
-        <div className="mb-10">
+        <div className="mb-6">
           <p className="text-xs font-black uppercase tracking-[0.3em] text-[#d5a56a]">Admin Panel</p>
           <p className="text-xl font-black text-white">Dashboard</p>
         </div>
+
+        <button
+          onClick={onGoHome}
+          className="mb-6 flex w-full items-center gap-3 rounded-xl border border-[#d5a56a]/40 bg-[#251735] px-4 py-3 text-sm font-bold text-[#f7d9b2] shadow-sm transition hover:bg-[#d5a56a] hover:text-[#2a1724]"
+        >
+          <span>🏠</span> Quay về trang chủ
+        </button>
 
         <nav className="flex flex-col gap-2">
           {[
