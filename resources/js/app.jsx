@@ -362,6 +362,7 @@ function App() {
   const [adminPage, setAdminPageState] = useState(() => {
     return getCookie('adminPage') || 'dashboard';
   });
+  const [viewPublicHome, setViewPublicHome] = useState(false);
 
   const setAuth = (nextAuth) => {
     try {
@@ -480,8 +481,6 @@ function App() {
       />
     );
   }
-
-  const [viewPublicHome, setViewPublicHome] = useState(false);
 
   // Admin goes directly to AdminPanel unless they toggled to view PublicHome
   if (auth.user?.role === 'admin' && !viewPublicHome) {
