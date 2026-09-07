@@ -842,7 +842,7 @@ function PublicHome({ auth, setAuth, onAdminClick, onLogout, onLoginClick, onReg
           </div>
         </nav>
 
-        <div className="mt-4 grid items-stretch gap-4 lg:grid-cols-[minmax(0,1fr)_400px]">
+        <div className="mt-4 grid items-start gap-4 lg:grid-cols-[minmax(0,1fr)_400px]">
           <section id="trang-chu" className="overflow-hidden rounded-2xl border border-[#7f5c44]/40 bg-[#0b0712]">
             <div className="relative h-full min-h-[127px]">
               {salonSettings.hero_image ? (
@@ -863,7 +863,7 @@ function PublicHome({ auth, setAuth, onAdminClick, onLogout, onLoginClick, onReg
                 </>
               )}
 
-              <div className="relative z-10 flex h-full min-h-[220px] flex-col justify-center px-6 py-5 md:px-10 md:py-6">
+              <div className="relative z-10 flex h-full min-h-[180px] flex-col justify-center px-6 py-4 md:px-10 md:py-5">
                 <p className="mb-2 text-xs font-bold uppercase tracking-[0.4em] text-[#e5b776] drop-shadow-[0_2px_10px_rgba(0,0,0,0.75)]">{salonSettings.salon_name || 'Luxury Nails Spa'}</p>
                 <h1 className="mb-3 text-3xl font-black leading-tight text-[#fff0e4] drop-shadow-[0_4px_18px_rgba(0,0,0,0.70)] md:text-4xl xl:text-5xl">
                   Nâng tầm vẻ đẹp
@@ -876,9 +876,9 @@ function PublicHome({ auth, setAuth, onAdminClick, onLogout, onLoginClick, onReg
             </div>
           </section>
 
-          <aside className="flex min-h-[370px] flex-col">
-            <div id="dat-lich" className="flex h-full flex-col rounded-2xl border border-[#d5a56a]/40 bg-[#140d1f] p-6 shadow-xl shadow-black/20">
-              <h3 className="text-xl font-black uppercase tracking-wide text-[#f7d9b2] mb-5 flex items-center gap-2">
+          <aside className="flex min-h-[280px] flex-col">
+            <div id="dat-lich" className="flex h-full flex-col rounded-2xl border border-[#d5a56a]/40 bg-[#140d1f] p-4 shadow-xl shadow-black/20">
+              <h3 className="text-lg font-black uppercase tracking-wide text-[#f7d9b2] mb-3 flex items-center gap-2">
                 Đặt lịch hẹn
               </h3>
               {!auth ? (
