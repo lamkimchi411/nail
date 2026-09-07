@@ -876,7 +876,7 @@ function PublicHome({ auth, setAuth, onAdminClick, onLogout, onLoginClick, onReg
             </div>
           </section>
 
-          <aside className="flex min-h-[520px] flex-col">
+          <aside className="flex min-h-[370px] flex-col">
             <div id="dat-lich" className="flex h-full flex-col rounded-2xl border border-[#d5a56a]/40 bg-[#140d1f] p-6 shadow-xl shadow-black/20">
               <h3 className="text-xl font-black uppercase tracking-wide text-[#f7d9b2] mb-5 flex items-center gap-2">
                 Đặt lịch hẹn
