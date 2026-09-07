@@ -863,13 +863,13 @@ function PublicHome({ auth, setAuth, onAdminClick, onLogout, onLoginClick, onReg
                 </>
               )}
 
-              <div className="relative z-10 flex h-full min-h-[320px] flex-col justify-center px-6 py-8 md:px-16 md:py-10">
-                <p className="mb-4 text-base font-bold uppercase tracking-[0.4em] text-[#e5b776] drop-shadow-[0_2px_10px_rgba(0,0,0,0.75)]">{salonSettings.salon_name || 'Luxury Nails Spa'}</p>
-                <h1 className="mb-6 text-4xl font-black leading-tight text-[#fff0e4] drop-shadow-[0_4px_18px_rgba(0,0,0,0.70)] md:text-6xl xl:text-7xl">
+              <div className="relative z-10 flex h-full min-h-[220px] flex-col justify-center px-6 py-5 md:px-10 md:py-6">
+                <p className="mb-2 text-xs font-bold uppercase tracking-[0.4em] text-[#e5b776] drop-shadow-[0_2px_10px_rgba(0,0,0,0.75)]">{salonSettings.salon_name || 'Luxury Nails Spa'}</p>
+                <h1 className="mb-3 text-3xl font-black leading-tight text-[#fff0e4] drop-shadow-[0_4px_18px_rgba(0,0,0,0.70)] md:text-4xl xl:text-5xl">
                   Nâng tầm vẻ đẹp
                   <span className="block text-[#ffcdd2]">đôi tay bạn</span>
                 </h1>
-                <p className="max-w-xl text-base font-semibold leading-7 text-[#f2dfd7] drop-shadow-[0_2px_10px_rgba(0,0,0,0.70)] md:text-lg">
+                <p className="max-w-xl text-sm font-semibold leading-6 text-[#f2dfd7] drop-shadow-[0_2px_10px_rgba(0,0,0,0.70)]">
                   Chọn dịch vụ, ngày giờ và gửi lịch hẹn trong vài thao tác. Tài khoản customer có thể theo dõi lịch đã đặt ngay bên dưới.
                 </p>
               </div>
