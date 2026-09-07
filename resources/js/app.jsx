@@ -844,7 +844,7 @@ function PublicHome({ auth, setAuth, onAdminClick, onLogout, onLoginClick, onReg
 
         <div className="mt-4 grid items-stretch gap-4 lg:grid-cols-[minmax(0,1fr)_400px]">
           <section id="trang-chu" className="overflow-hidden rounded-2xl border border-[#7f5c44]/40 bg-[#0b0712]">
-            <div className="relative h-full min-h-[347px]">
+            <div className="relative h-full min-h-[327px]">
               {salonSettings.hero_image ? (
                 <>
                   <img
@@ -957,8 +957,8 @@ function PublicHome({ auth, setAuth, onAdminClick, onLogout, onLoginClick, onReg
                               type="button"
                               onClick={() => setBookingForm({ ...bookingForm, appointment_time: slot })}
                               className={`rounded-lg border px-2 py-2 text-xs font-bold transition ${bookingForm.appointment_time === slot
-                                  ? 'border-[#d5a56a] bg-[#d5a56a] text-[#2a1724]'
-                                  : 'border-[#6f5262] bg-[#0f0a17] text-[#cbb9bb] hover:border-[#d5a56a]'
+                                ? 'border-[#d5a56a] bg-[#d5a56a] text-[#2a1724]'
+                                : 'border-[#6f5262] bg-[#0f0a17] text-[#cbb9bb] hover:border-[#d5a56a]'
                                 }`}
                             >
                               {slot}
@@ -991,8 +991,8 @@ function PublicHome({ auth, setAuth, onAdminClick, onLogout, onLoginClick, onReg
                             type="button"
                             onClick={() => toggleService(s.id)}
                             className={`w-full flex justify-between items-center px-3 py-2 rounded-lg text-xs transition border ${bookingForm.service_ids.includes(s.id)
-                                ? 'border-[#d5a56a] bg-[#d5a56a]/10 text-[#f7d9b2]'
-                                : 'border-[#6f5262] bg-[#0f0a17] text-[#cbb9bb] hover:border-[#8d6a52]'
+                              ? 'border-[#d5a56a] bg-[#d5a56a]/10 text-[#f7d9b2]'
+                              : 'border-[#6f5262] bg-[#0f0a17] text-[#cbb9bb] hover:border-[#8d6a52]'
                               }`}
                           >
                             <span className="flex items-center gap-2 text-left">
@@ -1123,9 +1123,9 @@ function PublicHome({ auth, setAuth, onAdminClick, onLogout, onLoginClick, onReg
                     </div>
                     <div className="flex items-center gap-3">
                       <span className={`rounded-full px-3 py-1 text-[10px] font-black uppercase tracking-wider ${apt.status === 'confirmed' ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30' :
-                          apt.status === 'pending' ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30' :
-                            apt.status === 'cancelled' ? 'bg-rose-500/20 text-rose-300 border border-rose-500/30' :
-                              'bg-slate-500/20 text-slate-300 border border-slate-500/30'
+                        apt.status === 'pending' ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30' :
+                          apt.status === 'cancelled' ? 'bg-rose-500/20 text-rose-300 border border-rose-500/30' :
+                            'bg-slate-500/20 text-slate-300 border border-slate-500/30'
                         }`}>
                         {apt.status}
                       </span>
@@ -2324,10 +2324,10 @@ function AdminPanel({ auth, setAuth, onLogout, onGoHome, page, setPage }) {
                                 disabled={!date}
                                 onClick={() => date && handleNewAptDateSelect(date)}
                                 className={`rounded px-1 py-1 text-[10px] font-semibold ${!date
-                                    ? 'text-[#6f5262]'
-                                    : isSelected
-                                      ? 'bg-[#f7d9b2] text-[#2a1724]'
-                                      : 'bg-[#2a1d2f] text-[#f7d9b2] hover:bg-[#3a2d3f]'
+                                  ? 'text-[#6f5262]'
+                                  : isSelected
+                                    ? 'bg-[#f7d9b2] text-[#2a1724]'
+                                    : 'bg-[#2a1d2f] text-[#f7d9b2] hover:bg-[#3a2d3f]'
                                   }`}
                               >
                                 {date?.getDate()}
@@ -2372,8 +2372,8 @@ function AdminPanel({ auth, setAuth, onLogout, onGoHome, page, setPage }) {
                             <label
                               key={service.id}
                               className={`flex cursor-pointer items-center justify-between rounded-md border px-3 py-2 text-sm transition ${checked
-                                  ? 'border-amber-400 bg-amber-500/20 text-amber-100'
-                                  : 'border-[#6f5262] bg-[#0f0a17] text-[#f8e7d9] hover:border-[#8d6a52]'
+                                ? 'border-amber-400 bg-amber-500/20 text-amber-100'
+                                : 'border-[#6f5262] bg-[#0f0a17] text-[#f8e7d9] hover:border-[#8d6a52]'
                                 }`}
                             >
                               <span>{service.name}</span>
@@ -2432,10 +2432,10 @@ function AdminPanel({ auth, setAuth, onLogout, onGoHome, page, setPage }) {
                               setShowNewAptTimeGrid(false);
                             }}
                             className={`rounded px-2 py-2 text-center text-xs font-bold transition ${isBooked
-                                ? 'cursor-not-allowed bg-rose-500/20 text-rose-300 opacity-50'
-                                : isSelected
-                                  ? 'bg-[#f0c6bb] text-[#2a1724]'
-                                  : 'bg-[#2a1d2f] text-[#f7d9b2] hover:bg-[#3a2d3f]'
+                              ? 'cursor-not-allowed bg-rose-500/20 text-rose-300 opacity-50'
+                              : isSelected
+                                ? 'bg-[#f0c6bb] text-[#2a1724]'
+                                : 'bg-[#2a1d2f] text-[#f7d9b2] hover:bg-[#3a2d3f]'
                               }`}
                           >
                             {slot}
@@ -2558,8 +2558,8 @@ function AdminPanel({ auth, setAuth, onLogout, onGoHome, page, setPage }) {
                                     <label
                                       key={service.id}
                                       className={`flex cursor-pointer items-center justify-between rounded-md border px-3 py-2 text-sm transition ${checked
-                                          ? 'border-amber-400 bg-amber-500/20 text-amber-100'
-                                          : 'border-[#6f5262] bg-[#120b1c] text-[#f8e7d9] hover:border-[#8d6a52]'
+                                        ? 'border-amber-400 bg-amber-500/20 text-amber-100'
+                                        : 'border-[#6f5262] bg-[#120b1c] text-[#f8e7d9] hover:border-[#8d6a52]'
                                         }`}
                                     >
                                       <span>{service.name}</span>
@@ -2640,10 +2640,10 @@ function AdminPanel({ auth, setAuth, onLogout, onGoHome, page, setPage }) {
                                         disabled={!date}
                                         onClick={() => date && handleEditAptDateSelect(date)}
                                         className={`rounded px-1 py-1 text-[10px] font-semibold ${!date
-                                            ? 'text-[#6f5262]'
-                                            : isSelected
-                                              ? 'bg-[#f7d9b2] text-[#2a1724]'
-                                              : 'bg-[#2a1d2f] text-[#f7d9b2] hover:bg-[#3a2d3f]'
+                                          ? 'text-[#6f5262]'
+                                          : isSelected
+                                            ? 'bg-[#f7d9b2] text-[#2a1724]'
+                                            : 'bg-[#2a1d2f] text-[#f7d9b2] hover:bg-[#3a2d3f]'
                                           }`}
                                       >
                                         {date?.getDate()}
@@ -2688,10 +2688,10 @@ function AdminPanel({ auth, setAuth, onLogout, onGoHome, page, setPage }) {
                                       setShowEditAptTimeGrid(false);
                                     }}
                                     className={`rounded px-2 py-2 text-center text-xs font-bold transition ${isBooked
-                                        ? 'cursor-not-allowed bg-rose-500/20 text-rose-300 opacity-50'
-                                        : isSelected
-                                          ? 'bg-[#f0c6bb] text-[#2a1724]'
-                                          : 'bg-[#2a1d2f] text-[#f7d9b2] hover:bg-[#3a2d3f]'
+                                      ? 'cursor-not-allowed bg-rose-500/20 text-rose-300 opacity-50'
+                                      : isSelected
+                                        ? 'bg-[#f0c6bb] text-[#2a1724]'
+                                        : 'bg-[#2a1d2f] text-[#f7d9b2] hover:bg-[#3a2d3f]'
                                       }`}
                                   >
                                     {slot}
