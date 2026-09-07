@@ -844,7 +844,7 @@ function PublicHome({ auth, setAuth, onAdminClick, onLogout, onLoginClick, onReg
 
         <div className="mt-4 grid items-stretch gap-4 lg:grid-cols-[minmax(0,1fr)_400px]">
           <section id="trang-chu" className="overflow-hidden rounded-2xl border border-[#7f5c44]/40 bg-[#0b0712]">
-            <div className="relative h-full min-h-[327px]">
+            <div className="relative h-full min-h-[127px]">
               {salonSettings.hero_image ? (
                 <>
                   <img
